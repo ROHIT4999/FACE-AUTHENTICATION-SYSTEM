@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('success') }}">Home</a>
+        <a href="{{ url_for('diagnose') }}">Diagnose</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Login Successful</h1>
+        <!-- Corrected to use the static image name -->
+        <img src="{{ url_for('static', filename='login/login_face.jpg') }}" alt="User Image" />
+        <p>Welcome, {{ name }}!</p>
+        <br>
+    </div>
+</body>
+</html>

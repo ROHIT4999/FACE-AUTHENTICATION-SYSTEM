@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Face Auth</title>
+    <script src="/static/script.js" defer></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Face Authentication - Register</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" id="nameInput" placeholder="Enter your name" required>
+        <button type="button" onclick="register()">Register</button>
+    </form>
+
+    <p>Already registered? <a href="/login">Login here</a></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnose</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='diagnose.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <h1>Diagnose</h1>
+    <div class="video-feed">
+        <img id="video" src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <h2>NOTE: If the emotion tile in the video disappear, proceed to reveal your emotion</h2>
+    <button id="start-diagnose-button">PROCEED</button>
+    <button id="start-chatbot-button" style="display:none;">REVEAL</button>
+    
+    <script>
+        document.getElementById('start-diagnose-button').addEventListener('click', function() {
+            fetch('/start_diagnose', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show the chatbot button after diagnosis
+                    document.getElementById('start-chatbot-button').style.display = 'inline';
+                }
+            });
+        });
+
+        document.getElementById('start-chatbot-button').addEventListener('click', function() {
+            window.location.href = '/chatbot';
+        });
+    </script>
+</body>
+</html>

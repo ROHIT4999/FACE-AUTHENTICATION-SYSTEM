@@ -1,0 +1,70 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #555;
+    text-align: center;
+}
+
+/* Video feed styles */
+.video-feed {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+button:disabled {
+    background-color: #a0c4e8;
+    cursor: not-allowed;
+}
+
+/* For the chatbot button initially hidden */
+#start-chatbot-button {
+    display: none;
+}

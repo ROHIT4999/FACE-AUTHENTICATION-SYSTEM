@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <p id="chatbot-response">{{ question }}</p>
+        <input type="text" id="response-input" style="display: none;" placeholder="Your response...">
+        <!-- Example structure -->
+        <label><input type="radio" name="response" value="yes"> Yes</label>
+        <label><input type="radio" name="response" value="no"> No</label>
+        <button id="submit-response-button">Submit</button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
